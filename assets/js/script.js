@@ -29,6 +29,15 @@ function runGame(gameType) {
 
     if (gameType === "addition") {
         displayAdditionQuestion(num1, num2);
+    } else if (gameType === "multiply") {
+        displayMultiplyQuestion(num1, num2);
+
+    } else if (gameType === "substract") {
+        displaySubtractQuestion(num1, num2);
+
+    } else if (gameType === "division") {
+        displayDivideQuestion(num1, num2);
+        
     } else {
         alert(`unknown game type: ${gameType}`);
         throw `Unknown game type: ${gameType}. Aborting!`;
