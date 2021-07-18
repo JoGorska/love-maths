@@ -2,7 +2,7 @@
 // Get the button elements and add event listeners to them
 
 document.addEventListener("DOMContentLoaded", function() {
-    console.log("I'm inside first function")
+    
     let buttons = document.getElementsByTagName("button");
     
     for(let button of buttons) {
@@ -24,10 +24,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function runGame(gameType) {
     // Creates two random numbers 1 - 25
-    let num1 = Math.floor(Math.random() * 25 + 1;
-    let num2 = Math.floor(Math.random() * 25 + 1;
+    let num1 = Math.floor(Math.random() * 25) + 1;
+    let num2 = Math.floor(Math.random() * 25) + 1;
 
-    if(gameType === "addition") {
+    if (gameType === "addition") {
         displayAdditionQuestion(num1, num2);
     } else {
         alert(`unknown game type: ${gameType}`);
@@ -52,7 +52,7 @@ function incrementWrongAnswer() {
 }
 
 function displayAdditionQuestion(operand1, operand2) {
-    console.log('this addition works');
+    
     document.getElementById('operand1').textContent = operand1;
     document.getElementById('operand2').textContent = operand2;
     document.getElementById('operator').textContent = "+";
